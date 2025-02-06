@@ -14,6 +14,11 @@ import Pricing from "@/pages/pricing";
 import Documentation from "@/pages/documentation";
 import DashboardLayout from "@/layouts/dashboard-layout";
 import RepositoryDetails from "@/pages/dashboard/repository";
+import CodeReviews from "./pages/dashboard/reviews";
+import APIDocs from "./pages/dashboard/docs";
+import Team from "./pages/dashboard/team";
+import { AnalyticsDashboard } from "./components/dashboard/analytics";
+import SettingsPage from "./pages/dashboard/settings";
 
 function DashboardRoute({ component: Component }: { component: React.ComponentType }) {
   return (
@@ -29,6 +34,11 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/dashboard" component={() => <DashboardRoute component={Dashboard} />} />
       <Route path="/dashboard/repository" component={() => <DashboardRoute component={RepositoryDetails} />} />
+      <Route path="/dashboard/reviews" component={() => <DashboardRoute component={CodeReviews} />} />
+      <Route path="/dashboard/docs" component={() => <DashboardRoute component={APIDocs} />} />
+      <Route path="/dashboard/team" component={() => <DashboardRoute component={Team} />} />
+      <Route path="/dashboard/analytics" component={() => <DashboardRoute component={AnalyticsDashboard} />} />
+      <Route path="/dashboard/settings" component={() => <DashboardRoute component={SettingsPage} />} />
       <Route path="/features" component={Features} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/documentation" component={Documentation} />
@@ -44,10 +54,33 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <Header /> {/* Assuming a Header component exists */}
       <Router />
       <Toaster />
     </QueryClientProvider>
   );
 }
+
+// Placeholder components - replace with your actual implementations
+function Header() {
+  return (
+    <header>
+      <h1>Kerl <span style={{ fontSize: "0.8em", color: "gray" }}> (beta)</span></h1>
+    </header>
+  );
+}
+
+function CodeReviews() {
+  return <h1>Code Reviews</h1>;
+}
+
+function APIDocs() {
+  return <h1>API Docs</h1>;
+}
+
+function Team() {
+  return <h1>Team - Coming Soon</h1>;
+}
+
 
 export default App;

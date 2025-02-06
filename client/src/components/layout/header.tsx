@@ -45,7 +45,10 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="font-bold text-2xl text-primary cursor-pointer" onClick={() => setLocation("/")}>
-            Kerl
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              Kerl
+              <span className="bg-primary/10 text-primary text-xs px-2 py-0.5 rounded-full">beta</span>
+            </h2>
           </div>
         </div>
 
