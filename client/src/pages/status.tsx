@@ -219,8 +219,21 @@ export default function Status() {
 
         <h2 className="text-2xl font-bold mt-12 mb-6">Scheduled Maintenance</h2>
         <Card>
-          <CardContent className="pt-6">
-            <p className="text-muted-foreground">No scheduled maintenance at this time.</p>
+          <CardContent className="pt-6 space-y-4">
+            <div className="border-l-4 border-blue-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Platform-wide Performance Optimization</h3>
+                <Badge variant="outline" className="text-blue-500">Scheduled</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 15, 2024 (02:00 - 04:00 UTC) - System-wide performance optimization and infrastructure upgrades.</p>
+            </div>
+            <div className="border-l-4 border-blue-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Database Migration & Optimization</h3>
+                <Badge variant="outline" className="text-blue-500">Scheduled</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 20, 2024 (03:00 - 05:00 UTC) - Database migration for improved scalability and performance.</p>
+            </div>
           </CardContent>
         </Card>
       </div>

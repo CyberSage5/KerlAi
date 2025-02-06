@@ -53,8 +53,9 @@ export default function Header() {
     <header className="border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="font-bold text-2xl text-primary cursor-pointer" onClick={() => setLocation("/")}>
-            <h2 className="text-lg font-semibold">Kerl</h2>
+          <div className="font-bold text-2xl text-primary cursor-pointer flex items-center gap-2" onClick={() => setLocation("/")}>
+            <h2 className="text-lg font-semibold">KerlAI</h2>
+            <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Beta</span>
           </div>
         </div>
 
