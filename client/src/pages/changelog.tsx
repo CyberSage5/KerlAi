@@ -1,5 +1,8 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { useLocation } from "@tanstack/react-location";
 
 interface ChangelogEntry {
   date: string;
@@ -9,18 +12,6 @@ interface ChangelogEntry {
     description: string;
   }[];
 }
-
-const [, setLocation] = useLocation();
-
-return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold">Changelog</h1>
-          <Button variant="outline" onClick={() => setLocation("/")}>
-            Back to Home
-          </Button>
-        </div>
 
 const changelog: ChangelogEntry[] = [
   {
@@ -194,10 +185,17 @@ const badgeVariants = {
 };
 
 export default function Changelog() {
+  const [, setLocation] = useLocation();
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Changelog</h1>
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-4xl font-bold">Changelog</h1>
+          <Button variant="outline" onClick={() => setLocation("/")}>
+            Back to Home
+          </Button>
+        </div>
 
         <div className="space-y-6">
           {changelog.map((entry) => (
