@@ -70,17 +70,5 @@ function Header() {
   );
 }
 
-function CodeReviews() {
-  return <h1>Code Reviews</h1>;
-}
-
-function APIDocs() {
-  return <h1>API Docs</h1>;
-}
-
-function Team() {
-  return <h1>Team - Coming Soon</h1>;
-}
-
 
 export default App;
