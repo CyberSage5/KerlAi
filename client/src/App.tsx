@@ -9,6 +9,9 @@ import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Status from "@/pages/status";
 import Changelog from "@/pages/changelog";
+import Features from "@/pages/features";
+import Pricing from "@/pages/pricing";
+import Documentation from "@/pages/documentation";
 import DashboardLayout from "@/layouts/dashboard-layout";
 
 function DashboardRoute({ component: Component }: { component: React.ComponentType }) {
@@ -24,6 +27,9 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/dashboard" component={() => <DashboardRoute component={Dashboard} />} />
+      <Route path="/features" component={Features} />
+      <Route path="/pricing" component={Pricing} />
+      <Route path="/documentation" component={Documentation} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/status" component={Status} />

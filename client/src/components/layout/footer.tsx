@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -12,36 +13,38 @@ export default function Footer() {
               AI-powered development assistant for modern teams
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Documentation</li>
+              <li><Link href="/features">Features</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/documentation">Documentation</Link></li>
+              <li><Link href="/status">Status</Link></li>
+              <li><Link href="/changelog">Changelog</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Careers</li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li>Privacy</li>
-              <li>Terms</li>
+              <li><Link href="/privacy">Privacy</Link></li>
+              <li><Link href="/terms">Terms</Link></li>
             </ul>
           </div>
         </div>
-        
+
         <Separator className="my-8" />
-        
+
         <div className="text-sm text-muted-foreground">
           © 2024 Kerl. All rights reserved.
         </div>
