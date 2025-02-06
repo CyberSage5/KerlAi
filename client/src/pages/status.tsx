@@ -146,8 +146,21 @@ export default function Status() {
 
         <h2 className="text-2xl font-bold mt-12 mb-6">Recent Incidents</h2>
         <Card>
-          <CardContent className="pt-6">
-            <p className="text-muted-foreground">No incidents reported in the last 90 days.</p>
+          <CardContent className="pt-6 space-y-4">
+            <div className="border-l-4 border-yellow-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">API Documentation Service Degraded Performance</h3>
+                <Badge variant="outline" className="text-yellow-500">Resolved</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 7, 2024 - High latency in API documentation generation was observed and resolved within 45 minutes.</p>
+            </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">System Upgrade</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 6, 2024 - Scheduled maintenance to improve AI model performance and system reliability.</p>
+            </div>
           </CardContent>
         </Card>
 

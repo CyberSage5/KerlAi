@@ -12,6 +12,28 @@ interface ChangelogEntry {
 
 const changelog: ChangelogEntry[] = [
   {
+    date: "February 7, 2024",
+    version: "1.0.1",
+    changes: [
+      {
+        type: "feature",
+        description: "Enhanced code review interface with AI suggestions"
+      },
+      {
+        type: "feature",
+        description: "Added API documentation generator with file upload support"
+      },
+      {
+        type: "improvement",
+        description: "Updated dashboard navigation with beta tag"
+      },
+      {
+        type: "improvement",
+        description: "Implemented 'Coming Soon' team collaboration feature"
+      }
+    ]
+  },
+  {
     date: "February 6, 2024",
     version: "1.0.0",
     changes: [
