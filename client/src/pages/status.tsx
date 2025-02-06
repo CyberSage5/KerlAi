@@ -11,6 +11,23 @@ interface Service {
 }
 
 const services: Record<string, Service[]> = {
+  "New Features": [
+    {
+      name: "GitHub Repository Insights",
+      status: "operational",
+      description: "Enhanced repository analytics and metrics"
+    },
+    {
+      name: "Custom API Templates",
+      status: "operational",
+      description: "Customizable documentation templates"
+    },
+    {
+      name: "Advanced Analytics",
+      status: "operational",
+      description: "Repository and code metrics dashboard"
+    }
+  ],
   "Core Services": [
     {
       name: "Authentication & GitHub OAuth",

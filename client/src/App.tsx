@@ -65,7 +65,7 @@ function App() {
 function Header() {
   return (
     <header>
-      <h1>Kerl <span style={{ fontSize: "0.8em", color: "gray" }}> (beta)</span></h1>
+      <h1>Kerl</h1>
     </header>
   );
 }

@@ -12,6 +12,28 @@ interface ChangelogEntry {
 
 const changelog: ChangelogEntry[] = [
   {
+    date: "February 8, 2024",
+    version: "1.0.2",
+    changes: [
+      {
+        type: "feature",
+        description: "Enhanced GitHub integration with repository insights"
+      },
+      {
+        type: "feature",
+        description: "Custom API documentation templates support"
+      },
+      {
+        type: "feature",
+        description: "Advanced analytics dashboard with repository metrics"
+      },
+      {
+        type: "improvement",
+        description: "Refined UI/UX with consistent beta labeling"
+      }
+    ]
+  },
+  {
     date: "February 7, 2024",
     version: "1.0.1",
     changes: [
