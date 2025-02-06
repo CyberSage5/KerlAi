@@ -1,0 +1,65 @@
+[2:02 PM, 2/6/2025] Meta AI: Repository Details Page
+1. Repository Header:
+    - Repository Name: Displayed prominently at the top of the page.
+    - Repository Description: Brief description of the repository.
+2. Code Review Section:
+    - Code Review List: List of code reviews for the repository, with information on the number of comments, issues, and approvals.
+    - Code Review Cards: Clickable cards for each code review, displaying the review name, description, and a "View Details" button.
+3. API Documentation Section:
+    - API Doc List: List of generated API documentation for the repository, with information on the number of endpoints, parameters, and responses.
+    - API Doc Cards: Clickable cards for each API documentation, displaying the doc name, description, and a "View Details" button.
+4. Issues Section:
+    - Issue List: List of issues for the repository, with information on the issue title, description, and status.
+    - Issue Cards: Clickable cards for each issue, displaying the issue title, description, and a "View Details" button.
+
+API Documentation Details Page
+1. API Doc Header:
+    - API Doc Name: Displayed prominently at the top of the page.
+    - API Doc Description: Brief description of the API documentation.
+2. Endpoint List:
+    - Endpoint Cards: Clickable cards for each endpoint, displaying the endpoint name, description, and a "View Details" button.
+3. Parameter List:
+    - Parameter Cards: Clickable cards for each parameter, displaying the parameter name, description, and data type.
+4. Response List:
+    - Response Cards: Clickable cards for each response, displaying the response name, description, and data type.
+
+Code Review Details Page
+1. Code Review Header:
+    - Code Review Name: Displayed prominently at the top of the page.
+    - Code Review Description: Brief description of the code review.
+2. Comment List:
+    - Comment Cards: Clickable cards for each comment, displaying the comment text, author, and timestamp.
+3. 
+[2:03 PM, 2/6/2025] Kaytay_0x: continue
+[2:03 PM, 2/6/2025] Meta AI: Here is the rest of the design:
+
+Code Review Details Page (continued)
+
+3. Issue List:
+    - Issue Cards: Clickable cards for each issue, displaying the issue title, description, and status.
+4. Approval Section:
+    - Approval Buttons: Buttons to approve or reject the code review.
+    - Approval History: List of previous approvals or rejections.
+
+Settings Page
+
+1. User Profile:
+    - Username: Displayed prominently at the top of the page.
+    - Email: User's email address.
+    - Password: Option to change password.
+2. Notification Preferences:
+    - Notification Settings: Options to customize notification settings, such as email or in-app notifications.
+3. Billing Details:
+    - Plan: Displayed plan information, including pricing and features.
+    - Payment Method: Option to update payment method.
+4. Integrations:
+    - GitHub Integration: Option to connect or disconnect GitHub account.
+    - Other Integrations: Options to connect or disconnect other integrations, such as Slack or Trello.
+
+Responsive Design
+
+The design should be fully responsive, adapting to different screen sizes and devices. This includes:
+
+1. Mobile Optimization: The design should be optimized for mobile devices, with easy-to-use navigation and minimal scrolling.
+2. Tablet Optimization: The design should be optimized for tablet devices, with a layout that takes advantage of the larger screen size.
+3. Desktop Optimization: The design should be optimized for desktop devices, with a layout that takes advantage of the largest screen size.

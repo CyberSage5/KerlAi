@@ -13,6 +13,7 @@ import Features from "@/pages/features";
 import Pricing from "@/pages/pricing";
 import Documentation from "@/pages/documentation";
 import DashboardLayout from "@/layouts/dashboard-layout";
+import RepositoryDetails from "@/pages/dashboard/repository";
 
 function DashboardRoute({ component: Component }: { component: React.ComponentType }) {
   return (
@@ -27,6 +28,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/dashboard" component={() => <DashboardRoute component={Dashboard} />} />
+      <Route path="/dashboard/repository" component={() => <DashboardRoute component={RepositoryDetails} />} />
       <Route path="/features" component={Features} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/documentation" component={Documentation} />

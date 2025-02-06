@@ -3,9 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, GitBranch, FileText, Code2, Settings } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Dashboard() {
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
   const { data: user, isLoading } = useQuery({
     queryKey: ["/api/user"],
   });
@@ -23,10 +25,7 @@ export default function Dashboard() {
       title: "Connect Repository",
       icon: GitBranch,
       description: "Add a new GitHub repository for code reviews",
-      action: () => toast({
-        title: "Coming Soon",
-        description: "This feature is not available in the demo"
-      })
+      action: () => setLocation("/dashboard/repository")
     },
     {
       title: "Create API Documentation",
@@ -57,10 +56,7 @@ export default function Dashboard() {
             Here's an overview of your development workflow
           </p>
         </div>
-        <Button variant="outline" onClick={() => toast({
-          title: "Coming Soon",
-          description: "Settings will be available in the next update"
-        })}>
+        <Button variant="outline" onClick={() => setLocation("/dashboard/settings")}>
           <Settings className="h-4 w-4 mr-2" />
           Settings
         </Button>
