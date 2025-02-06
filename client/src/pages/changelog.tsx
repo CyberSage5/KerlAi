@@ -15,6 +15,14 @@ interface ChangelogEntry {
 
 const changelog: ChangelogEntry[] = [
   {
+    date: "2024-02-06",
+    changes: [
+      { type: "added", description: "Documentation preview functionality" },
+      { type: "fixed", description: "Header layout and duplicate branding" },
+      { type: "improved", description: "Dashboard navigation and user experience" }
+    ]
+  },
+  {
     date: "February 8, 2024",
     version: "1.1.1",
     changes: [

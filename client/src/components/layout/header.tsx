@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { FaGithub } from "react-icons/fa";

@@ -164,21 +164,14 @@ export default function Status() {
         <h2 className="text-2xl font-bold mt-12 mb-6">Recent Incidents</h2>
         <Card>
           <CardContent className="pt-6 space-y-4">
-            <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold">System Status</h1>
-          <Button variant="outline" onClick={() => setLocation("/")}>
-            Back to Home
-          </Button>
-        </div>
-
-        <div className="border-l-4 border-green-500 pl-4">
-          <div className="flex items-center justify-between">
-            <h3 className="font-medium">UI/UX Improvements Deployment</h3>
-            <Badge variant="outline" className="text-green-500">Completed</Badge>
-          </div>
-          <p className="text-sm text-muted-foreground mt-1">Feb 8, 2024 - Successfully deployed header improvements and documentation preview features.</p>
-        </div>
-        <div className="border-l-4 border-yellow-500 pl-4">
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">UI/UX Improvements Deployment</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 8, 2024 - Successfully deployed header improvements and documentation preview features.</p>
+            </div>
+            <div className="border-l-4 border-yellow-500 pl-4">
               <div className="flex items-center justify-between">
                 <h3 className="font-medium">API Documentation Service Degraded Performance</h3>
                 <Badge variant="outline" className="text-yellow-500">Resolved</Badge>
@@ -192,6 +185,35 @@ export default function Status() {
               </div>
               <p className="text-sm text-muted-foreground mt-1">Feb 6, 2024 - Scheduled maintenance to improve AI model performance and system reliability.</p>
             </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Fix Duplicate Kerl Name</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 10, 2024 - Resolved issue with duplicate Kerl names.</p>
+            </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Add Mock Documentation Preview</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 10, 2024 - Implemented mock documentation preview functionality.</p>
+            </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Update Changelog with Recent Changes</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 10, 2024 - Updated changelog to reflect recent changes.</p>
+            </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">Update Status Page</h3>
+                <Badge variant="outline" className="text-green-500">Completed</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">Feb 10, 2024 - Updated status page with latest information.</p>
+            </div>
+
           </CardContent>
         </Card>
 

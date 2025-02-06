@@ -41,47 +41,11 @@ export default function APIDocs() {
     setIsGenerating(true);
     setTimeout(() => {
       setIsGenerating(false);
-      
+
       const mockPreviews = {
-        modern: `
-          <div class="p-4">
-            <h1 class="text-2xl font-bold mb-4">User API</h1>
-            <div class="space-y-4">
-              <div class="p-4 border rounded">
-                <h2 class="text-lg font-semibold">GET /api/users</h2>
-                <p class="text-muted-foreground">Retrieve a list of users</p>
-              </div>
-            </div>
-          </div>
-        `,
-        detailed: `
-          <div class="p-4">
-            <h1 class="text-2xl font-bold mb-4">API Reference</h1>
-            <div class="space-y-6">
-              <div class="p-6 border rounded">
-                <h2 class="text-xl font-bold mb-2">Authentication</h2>
-                <p class="mb-4">Bearer token required for all endpoints</p>
-                <pre class="bg-muted p-2 rounded">Authorization: Bearer {token}</pre>
-              </div>
-            </div>
-          </div>
-        `,
-        swagger: `
-          <div class="p-4">
-            <h1 class="text-2xl font-bold mb-4">Swagger UI</h1>
-            <div class="space-y-4">
-              <div class="bg-[#f8f9fa] p-4 rounded">
-                <h3 class="font-mono">GET /api/v1/users</h3>
-                <div class="mt-2 space-y-2">
-                  <div class="flex gap-2">
-                    <span class="text-green-600">200</span>
-                    <span>Success</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `
+        modern: `# Modern API Documentation\n\n## Endpoints\n\n### GET /api/users\nRetrieve a list of users.`,
+        detailed: `# Detailed API Reference\n\n## Authentication\nAll endpoints require Bearer token authentication.`,
+        swagger: `openapi: 3.0.0\ninfo:\n  title: API Documentation\n  version: 1.0.0\npaths:\n  /api/users:\n    get:\n      summary: Get users`
       };
 
       setPreviewContent(mockPreviews[selectedTemplate as keyof typeof mockPreviews]);
@@ -135,6 +99,9 @@ export default function APIDocs() {
             <FileText className="mr-2 h-4 w-4" />
             Generate Documentation
           </Button>
+          {previewContent && (
+            <pre>{previewContent}</pre>
+          )}
         </CardContent>
       </Card>
     </div>
