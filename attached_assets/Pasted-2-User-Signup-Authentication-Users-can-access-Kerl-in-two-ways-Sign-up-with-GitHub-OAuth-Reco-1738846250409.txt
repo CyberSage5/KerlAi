@@ -1,0 +1,87 @@
+2. User Signup & Authentication
+
+Users can access Kerl in two ways:
+
+Sign up with GitHub OAuth (Recommended) - Allows full integration with GitHub repositories.
+
+Guest Mode - Users can upload OpenAPI files manually for documentation.
+
+Upon signup, users are redirected to their dashboard where they can manage repositories, API documentation, and settings.
+
+Core Features & Platform Workflow
+
+1. AI Code Review Bot
+
+The Kerl Code Review Bot automatically reviews pull requests (PRs) and provides AI-powered feedback.
+
+How It Works:
+
+User connects GitHub repo
+
+OAuth Authentication allows Kerl to access selected repositories.
+
+Alternatively, users can install the Kerl GitHub App to enable webhooks.
+
+Bot detects new pull requests
+
+Whenever a PR is opened or updated, Kerl fetches the code.
+
+Code Analysis & Review
+
+Runs linting tools (ESLint, Pylint, etc.).
+
+Uses AI to detect bad practices and suggest improvements.
+
+Security checks using tools like Snyk.
+
+Automated PR Comments
+
+Kerl posts inline comments with explanations and fixes.
+
+Developers can accept or reject suggestions.
+
+Dashboard Insights
+
+Users can view detailed reports of code quality & history.
+
+Tech Stack:
+
+GitHub API & Webhooks for event detection
+
+Node.js & Express for backend processing
+
+OpenAI API for AI-driven code analysis
+
+ESLint, Pylint, Snyk for linting & security
+
+2. Interactive API Documentation Generator
+
+Kerl helps developers create beautiful, interactive API documentation from OpenAPI (Swagger) specs.
+
+How It Works:
+
+User uploads OpenAPI file (.json or .yaml)
+
+Or syncs it from a GitHub repo (auto-updates when API changes).
+
+Kerl parses API schema
+
+Extracts endpoints, parameters, and responses.
+
+AI-Powered Enhancements
+
+Suggests better descriptions, naming conventions, and best practices.
+
+Detects missing security measures.
+
+Interactive API Playground
+
+Users can send test requests to endpoints (like Postman).
+
+View real-time responses, headers, and error handling.
+
+Deploy & Share Docs
+
+Hosted documentation available at kerl.dev/docs/{project}.
+
+Auto-updates from GitHub.
