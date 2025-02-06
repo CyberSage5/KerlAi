@@ -7,12 +7,20 @@ import {
   FileText,
   Settings,
   Users,
-  BarChart
+  BarChart,
+  Home,
+  GitBranch // Added for Code Review icon
 } from "lucide-react";
+
+// Added components for new features (replace with actual component imports)
+import AnalyticsDashboard from "./AnalyticsDashboard"; // Placeholder
+import CodeReviewPage from "./CodeReviewPage";       // Placeholder
+import UserSettings from "./UserSettings";           // Placeholder
+
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Overview", href: "/dashboard" },
-  { icon: Code2, label: "Code Reviews", href: "/dashboard/reviews" },
+  { icon: GitBranch, label: "Code Reviews", href: "/dashboard/reviews" }, // Updated
   { icon: FileText, label: "API Docs", href: "/dashboard/docs" },
   { icon: Users, label: "Team", href: "/dashboard/team" },
   { icon: BarChart, label: "Analytics", href: "/dashboard/analytics" },
@@ -48,4 +56,17 @@ export default function Sidebar() {
       </div>
     </div>
   );
+}
+
+// Placeholder components (replace with actual implementations)
+function AnalyticsDashboard() {
+  return <div>Analytics Dashboard Content</div>;
+}
+
+function CodeReviewPage() {
+  return <div>Code Review Page Content</div>;
+}
+
+function UserSettings() {
+  return <div>User Settings Content</div>;
 }

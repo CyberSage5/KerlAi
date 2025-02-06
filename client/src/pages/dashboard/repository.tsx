@@ -3,12 +3,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, GitBranch, FileText, AlertCircle } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 export default function Repository() {
   const { toast } = useToast();
+  const [reviewCode, setReviewCode] = useState("");
   const { data: repository, isLoading } = useQuery({
-    queryKey: ["/api/repository/1"], // Mock repository ID
+    queryKey: ["/api/repository/1"],
   });
+
+  const handleReview = async () => {
+    if (!reviewCode.trim()) {
+      toast({
+        title: "Error",
+        description: "Please enter some code to review",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    toast({
+      title: "Starting Review",
+      description: "AI is analyzing your code..."
+    });
+
+    // TODO: Implement API call
+  };
 
   if (isLoading) {
     return (
@@ -18,43 +39,30 @@ export default function Repository() {
     );
   }
 
-  // Mock data for demonstration
-  const mockRepository = {
-    name: "example-repo",
-    description: "An example repository to showcase Kerl's features",
-    codeReviews: [],
-    apiDocs: [],
-    issues: []
-  };
-
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold mb-2">{mockRepository.name}</h1>
-        <p className="text-muted-foreground">{mockRepository.description}</p>
+        <h1 className="text-3xl font-bold mb-2">Code Review</h1>
+        <p className="text-muted-foreground">Get instant feedback on your code</p>
       </div>
 
       <Card>
         <CardHeader>
           <div className="flex items-center gap-2">
             <GitBranch className="h-5 w-5 text-primary" />
-            <CardTitle>Code Reviews</CardTitle>
+            <CardTitle>Submit Code for Review</CardTitle>
           </div>
         </CardHeader>
         <CardContent>
-          {mockRepository.codeReviews.length === 0 ? (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground mb-4">No code reviews yet</p>
-              <Button onClick={() => toast({
-                title: "Coming Soon",
-                description: "Code review feature will be available soon"
-              })}>
-                Start Code Review
-              </Button>
-            </div>
-          ) : (
-            <div>Code review list will go here</div>
-          )}
+          <Textarea
+            value={reviewCode}
+            onChange={(e) => setReviewCode(e.target.value)}
+            placeholder="Paste your code here..."
+            className="min-h-[200px] mb-4"
+          />
+          <Button onClick={handleReview}>
+            Start Review
+          </Button>
         </CardContent>
       </Card>
 
@@ -66,43 +74,12 @@ export default function Repository() {
           </div>
         </CardHeader>
         <CardContent>
-          {mockRepository.apiDocs.length === 0 ? (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground mb-4">No API documentation yet</p>
-              <Button onClick={() => toast({
-                title: "Coming Soon",
-                description: "API documentation feature will be available soon"
-              })}>
-                Generate API Docs
-              </Button>
-            </div>
-          ) : (
-            <div>API documentation list will go here</div>
-          )}
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            <AlertCircle className="h-5 w-5 text-primary" />
-            <CardTitle>Issues</CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent>
-          {mockRepository.issues.length === 0 ? (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground mb-4">No issues found</p>
-              <Button onClick={() => toast({
-                title: "Coming Soon",
-                description: "Issue tracking feature will be available soon"
-              })}>
-                Create Issue
-              </Button>
-            </div>
-          ) : (
-            <div>Issues list will go here</div>
-          )}
+          <Button onClick={() => toast({
+            title: "Generating Documentation",
+            description: "Starting OpenAPI documentation generation..."
+          })}>
+            Generate API Docs
+          </Button>
         </CardContent>
       </Card>
     </div>
