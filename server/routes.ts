@@ -19,13 +19,16 @@ export function registerRoutes(app: Express): Server {
   });
 
   app.get("/api/user", async (req, res) => {
-    // Mock authenticated user
-    const user = await storage.getUser(1);
-    if (!user) {
-      res.status(401).json({ message: "Unauthorized" });
-      return;
-    }
-    res.json(user);
+    // Mock authenticated user for development
+    const mockUser = {
+      id: 1,
+      username: "demo_user",
+      gitHubId: "123456",
+      email: "demo@example.com",
+      avatarUrl: "https://github.com/ghost.png",
+      isOnboarded: true
+    };
+    res.json(mockUser);
   });
 
   const httpServer = createServer(app);
