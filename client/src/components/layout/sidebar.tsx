@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
@@ -9,18 +10,12 @@ import {
   Users,
   BarChart,
   Home,
-  GitBranch // Added for Code Review icon
+  GitBranch
 } from "lucide-react";
-
-// Added components for new features (replace with actual component imports)
-import AnalyticsDashboard from "./AnalyticsDashboard"; // Placeholder
-import CodeReviewPage from "./CodeReviewPage";       // Placeholder
-import UserSettings from "./UserSettings";           // Placeholder
-
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Overview", href: "/dashboard" },
-  { icon: GitBranch, label: "Code Reviews", href: "/dashboard/reviews" }, // Updated
+  { icon: GitBranch, label: "Code Reviews", href: "/dashboard/reviews" },
   { icon: FileText, label: "API Docs", href: "/dashboard/docs" },
   { icon: Users, label: "Team", href: "/dashboard/team" },
   { icon: BarChart, label: "Analytics", href: "/dashboard/analytics" },
@@ -58,11 +53,7 @@ export default function Sidebar() {
   );
 }
 
-// Placeholder components (replace with actual implementations)
-function AnalyticsDashboard() {
-  return <div>Analytics Dashboard Content</div>;
-}
-
+// Only keeping CodeReviewPage and UserSettings placeholders
 function CodeReviewPage() {
   return <div>Code Review Page Content</div>;
 }
