@@ -1,0 +1,28 @@
+After signing in, the main app dashboard should provide a clear and intuitive overview of the platform's features and the user's projects. Here's a possible design for the dashboard:
+
+Left Sidebar
+1. Kerl Logo: Top-left corner, clickable to return to the dashboard homepage.
+2. Navigation Menu:
+    - Dashboard: Overview of user's projects, repositories, and API documentation.
+    - Repositories: List of connected GitHub repositories, with options to add/remove repositories.
+    - API Documentation: List of generated API documentation, with options to create/edit/delete docs.
+    - Code Reviews: List of code reviews, with options to create/edit/delete reviews.
+    - Settings: User settings, including profile information, notification preferences, and billing details.
+3. Quick Actions:
+    - New Repository: Button to connect a new GitHub repository.
+    - New API Doc: Button to create a new API documentation.
+    - New Code Review: Button to create a new code review.
+
+Dashboard Homepage
+1. Header:
+    - Welcome Message: Personalized welcome message with the user's name.
+    - Search Bar: Search bar to find specific repositories, API documentation, or code reviews.
+2. Repository Overview:
+    - Repository List: List of connected GitHub repositories, with information on the number of code reviews, API documentation, and issues.
+    - Repository Cards: Clickable cards for each repository, displaying the repository name, description, and a "View Details" button.
+3. API Documentation Overview:
+    - API Doc List: List of generated API documentation, with information on the number of endpoints, parameters, and responses.
+    - API Doc Cards: Clickable cards for each API documentation, displaying the doc name, description, and a "View Details" button.
+4. Code Review Overview:
+    - Code Review List: List of code reviews, with information on the number of comments, issues, and approvals.
+    - Code Review Cards: Clickable cards for each code review, displaying the review name, description, and a "View Details" button.

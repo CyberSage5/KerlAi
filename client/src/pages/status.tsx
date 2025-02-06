@@ -51,6 +51,30 @@ const services: Record<string, Service[]> = {
       status: "operational",
       description: "Data storage and retrieval"
     }
+  ],
+  "Developer Tools": [
+    {
+      name: "GitHub Webhook Processing",
+      status: "operational",
+      description: "Pull request detection and processing"
+    },
+    {
+      name: "Linting & Security Checks",
+      status: "operational",
+      description: "Code quality and security analysis"
+    }
+  ],
+  "Documentation Services": [
+    {
+      name: "OpenAPI Processing",
+      status: "operational",
+      description: "API specification parsing and validation"
+    },
+    {
+      name: "Documentation Sync",
+      status: "operational",
+      description: "Auto-updating from GitHub repositories"
+    }
   ]
 };
 
@@ -76,7 +100,22 @@ export default function Status() {
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">System Status</h1>
-        
+
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Overall System Status</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-2">
+              <Circle className="h-4 w-4 text-green-500" />
+              <span className="font-medium">All Systems Operational</span>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              Last updated: {new Date().toLocaleString()}
+            </p>
+          </CardContent>
+        </Card>
+
         <div className="grid gap-6">
           {Object.entries(services).map(([category, serviceList]) => (
             <Card key={category}>
@@ -104,6 +143,20 @@ export default function Status() {
             </Card>
           ))}
         </div>
+
+        <h2 className="text-2xl font-bold mt-12 mb-6">Recent Incidents</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-muted-foreground">No incidents reported in the last 90 days.</p>
+          </CardContent>
+        </Card>
+
+        <h2 className="text-2xl font-bold mt-12 mb-6">Scheduled Maintenance</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-muted-foreground">No scheduled maintenance at this time.</p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

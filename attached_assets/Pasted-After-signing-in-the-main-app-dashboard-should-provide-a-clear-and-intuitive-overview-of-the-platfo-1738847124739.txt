@@ -1,0 +1,61 @@
+After signing in, the main app dashboard should provide a clear and intuitive overview of the platform's features and the user's projects. Here's a possible design for the dashboard:
+
+Left Sidebar
+1. Kerl Logo: Top-left corner, clickable to return to the dashboard homepage.
+2. Navigation Menu:
+    - Dashboard: Overview of user's projects, repositories, and API documentation.
+    - Repositories: List of connected GitHub repositories, with options to add/remove repositories.
+    - API Documentation: List of generated API documentation, with options to create/edit/delete docs.
+    - Code Reviews: List of code reviews, with options to create/edit/delete reviews.
+    - Settings: User settings, including profile information, notification preferences, and billing details.
+3. Quick Actions:
+    - New Repository: Button to connect a new GitHub repository.
+    - New API Doc: Button to create a new API documentation.
+    - New Code Review: Button to create a new code review.
+
+Dashboard Homepage
+1. Header:
+    - Welcome Message: Personalized welcome message with the user's name.
+    - Search Bar: Search bar to find specific repositories, API documentation, or code reviews.
+2. Repository Overview:
+    - Repository List: List of connected GitHub repositories, with information on the number of code reviews, API documentation, and issues.
+    - Repository Cards: Clickable cards for each repository, displaying the repository name, description, and a "View Details" button.
+3. API Documentation Overview:
+    - API Doc List: List of generated API documentation, with information on the number of endpoints, parameters, and responses.
+    - API Doc Cards: Clickable cards for each API documentation, displaying the doc name, description, and a "View Details" button.
+4. Code Review Overview:
+    - Code Review List: List of code reviews, with information on the number of comments, issues, and approvals.
+    - Code Review Cards: Clickable cards for each code review, displaying the review name, description, and a "View Details" button.
+
+Repository Details Page
+1. Repository Header:
+    - Repository Name: Displayed prominently at the top of the page.
+    - Repository Description: Brief description of the repository.
+2. Code Review Section:
+    - Code Review List: List of code reviews for the repository, with information on the number of comments, issues, and approvals.
+    - Code Review Cards: Clickable cards for each code review, displaying the review name, description, and a "View Details" button.
+3. API Documentation Section:
+    - API Doc List: List of generated API documentation for the repository, with information on the number of endpoints, parameters, and responses.
+    - API Doc Cards: Clickable cards for each API documentation, displaying the doc name, description, and a "View Details" button.
+4. Issues Section:
+    - Issue List: List of issues for the repository, with information on the issue title, description, and status.
+    - Issue Cards: Clickable cards for each issue, displaying the issue title, description, and a "View Details" button.
+
+API Documentation Details Page
+1. API Doc Header:
+    - API Doc Name: Displayed prominently at the top of the page.
+    - API Doc Description: Brief description of the API documentation.
+2. Endpoint List:
+    - Endpoint Cards: Clickable cards for each endpoint, displaying the endpoint name, description, and a "View Details" button.
+3. Parameter List:
+    - Parameter Cards: Clickable cards for each parameter, displaying the parameter name, description, and data type.
+4. Response List:
+    - Response Cards: Clickable cards for each response, displaying the response name, description, and data type.
+
+Code Review Details Page
+1. Code Review Header:
+    - Code Review Name: Displayed prominently at the top of the page.
+    - Code Review Description: Brief description of the code review.
+2. Comment List:
+    - Comment Cards: Clickable cards for each comment, displaying the comment text, author, and timestamp.
+3. 
