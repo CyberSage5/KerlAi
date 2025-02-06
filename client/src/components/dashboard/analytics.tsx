@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Activity, Users, GitPullRequest, GitBranch, Star, Code, AlertCircle, CheckCircle } from "lucide-react";
-import { LineChart } from "@/components/ui/chart";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { Line, LineChart, XAxis, YAxis, ResponsiveContainer } from "recharts";
 
 export function AnalyticsDashboard() {
   const stats = [
@@ -78,11 +79,22 @@ export function AnalyticsDashboard() {
           <CardTitle>Repository Activity</CardTitle>
         </CardHeader>
         <CardContent>
-          <LineChart 
-            data={[10, 25, 15, 30, 20, 35, 45]}
-            labels={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
-            title="Weekly Commits"
-          />
+          <ChartContainer className="h-[200px]" config={{}}>
+            <LineChart data={[
+              { day: "Mon", commits: 10 },
+              { day: "Tue", commits: 25 },
+              { day: "Wed", commits: 15 },
+              { day: "Thu", commits: 30 },
+              { day: "Fri", commits: 20 },
+              { day: "Sat", commits: 35 },
+              { day: "Sun", commits: 45 }
+            ]}>
+              <XAxis dataKey="day" />
+              <YAxis />
+              <Line type="monotone" dataKey="commits" stroke="#8884d8" />
+              <ChartTooltip content={<ChartTooltipContent />} />
+            </LineChart>
+          </ChartContainer>
         </CardContent>
       </Card>
     </div>
