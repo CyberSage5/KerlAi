@@ -10,11 +10,30 @@ export default function APIDocs() {
   const [selectedTemplate, setSelectedTemplate] = useState("modern");
   const [isGenerating, setIsGenerating] = useState(false);
 
-  const templates = [
-    { id: "modern", name: "Modern", description: "Clean, minimalist documentation style" },
-    { id: "detailed", name: "Detailed", description: "Comprehensive documentation with examples" },
-    { id: "swagger", name: "Swagger UI", description: "Traditional Swagger/OpenAPI layout" }
-  ];
+  const [templates, setTemplates] = useState([
+    { id: "modern", name: "Modern", description: "Clean, minimalist documentation style", isCustom: false },
+    { id: "detailed", name: "Detailed", description: "Comprehensive documentation with examples", isCustom: false },
+    { id: "swagger", name: "Swagger UI", description: "Traditional Swagger/OpenAPI layout", isCustom: false }
+  ]);
+
+  const [showTemplateForm, setShowTemplateForm] = useState(false);
+  const [newTemplate, setNewTemplate] = useState({ name: "", description: "" });
+
+  const saveTemplate = () => {
+    const template = {
+      id: `custom-${Date.now()}`,
+      name: newTemplate.name,
+      description: newTemplate.description,
+      isCustom: true
+    };
+    setTemplates([...templates, template]);
+    setShowTemplateForm(false);
+    setNewTemplate({ name: "", description: "" });
+    toast({
+      title: "Template Saved",
+      description: "Your custom template has been created"
+    });
+  };
 
   const generateDocs = () => {
     setIsGenerating(true);

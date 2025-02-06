@@ -13,6 +13,28 @@ interface ChangelogEntry {
 const changelog: ChangelogEntry[] = [
   {
     date: "February 8, 2024",
+    version: "1.1.0",
+    changes: [
+      {
+        type: "feature",
+        description: "Added detailed repository metrics and analytics dashboard"
+      },
+      {
+        type: "feature",
+        description: "Implemented custom API documentation templates"
+      },
+      {
+        type: "improvement",
+        description: "Enhanced repository activity tracking with visual graphs"
+      },
+      {
+        type: "improvement",
+        description: "Added trend indicators to analytics metrics"
+      }
+    ]
+  },
+  {
+    date: "February 8, 2024",
     version: "1.0.2",
     changes: [
       {
