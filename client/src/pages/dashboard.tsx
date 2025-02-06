@@ -84,7 +84,22 @@ export default function Dashboard() {
             <CardTitle>Recent Activity</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">No recent activity to show</p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <GitBranch className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">Code Review Completed</p>
+                  <p className="text-sm text-muted-foreground">auth-service/login.ts - 10 minutes ago</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <FileText className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">API Documentation Generated</p>
+                  <p className="text-sm text-muted-foreground">user-service - 1 hour ago</p>
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
@@ -93,7 +108,20 @@ export default function Dashboard() {
             <CardTitle>Project Statistics</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">Connect repositories to see statistics</p>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span>Total Reviews</span>
+                <span className="font-medium">24</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>API Docs Generated</span>
+                <span className="font-medium">12</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Active Repositories</span>
+                <span className="font-medium">5</span>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>

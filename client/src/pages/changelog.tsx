@@ -10,7 +10,41 @@ interface ChangelogEntry {
   }[];
 }
 
+const [, setLocation] = useLocation();
+
+return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-4xl font-bold">Changelog</h1>
+          <Button variant="outline" onClick={() => setLocation("/")}>
+            Back to Home
+          </Button>
+        </div>
+
 const changelog: ChangelogEntry[] = [
+  {
+    date: "February 8, 2024",
+    version: "1.1.1",
+    changes: [
+      {
+        type: "improvement",
+        description: "Enhanced header with conditional auth state"
+      },
+      {
+        type: "feature",
+        description: "Added documentation preview templates"
+      },
+      {
+        type: "improvement",
+        description: "Added back navigation to changelog and status pages"
+      },
+      {
+        type: "feature",
+        description: "Added mock dashboard statistics and activity"
+      }
+    ]
+  },
   {
     date: "February 8, 2024",
     version: "1.1.0",

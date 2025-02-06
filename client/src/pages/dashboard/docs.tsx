@@ -35,10 +35,56 @@ export default function APIDocs() {
     });
   };
 
+  const [previewContent, setPreviewContent] = useState<string | null>(null);
+
   const generateDocs = () => {
     setIsGenerating(true);
     setTimeout(() => {
       setIsGenerating(false);
+      
+      const mockPreviews = {
+        modern: `
+          <div class="p-4">
+            <h1 class="text-2xl font-bold mb-4">User API</h1>
+            <div class="space-y-4">
+              <div class="p-4 border rounded">
+                <h2 class="text-lg font-semibold">GET /api/users</h2>
+                <p class="text-muted-foreground">Retrieve a list of users</p>
+              </div>
+            </div>
+          </div>
+        `,
+        detailed: `
+          <div class="p-4">
+            <h1 class="text-2xl font-bold mb-4">API Reference</h1>
+            <div class="space-y-6">
+              <div class="p-6 border rounded">
+                <h2 class="text-xl font-bold mb-2">Authentication</h2>
+                <p class="mb-4">Bearer token required for all endpoints</p>
+                <pre class="bg-muted p-2 rounded">Authorization: Bearer {token}</pre>
+              </div>
+            </div>
+          </div>
+        `,
+        swagger: `
+          <div class="p-4">
+            <h1 class="text-2xl font-bold mb-4">Swagger UI</h1>
+            <div class="space-y-4">
+              <div class="bg-[#f8f9fa] p-4 rounded">
+                <h3 class="font-mono">GET /api/v1/users</h3>
+                <div class="mt-2 space-y-2">
+                  <div class="flex gap-2">
+                    <span class="text-green-600">200</span>
+                    <span>Success</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `
+      };
+
+      setPreviewContent(mockPreviews[selectedTemplate as keyof typeof mockPreviews]);
       toast({
         title: "Documentation Generated",
         description: `Generated using ${templates.find(t => t.id === selectedTemplate)?.name} template`
